@@ -8,9 +8,7 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b">
         <div className="container mx-auto flex items-center justify-between py-4 px-4">
-          <span className="text-xl font-bold text-foreground">
-            Team<span className="text-primary">Consol</span>
-          </span>
+          <img src={logo} alt="TeamConsol Global Shipping & Logistics" className="h-12 md:h-14 w-auto" />
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#services" className="hover:text-foreground transition-colors">Services</a>
