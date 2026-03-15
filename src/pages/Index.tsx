@@ -247,44 +247,77 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-14 md:py-20 bg-section">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get in Touch</h2>
-          <p className="text-muted-foreground text-lg mb-8">Ready to ship? Contact us for a free quote or any inquiries.</p>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {[
-              { icon: Mail, label: "Email", value: "info@teamconsol.com" },
-              { icon: Phone, label: "Phone / WhatsApp", value: "+1 (800) 000-0000" },
-              { icon: MapPin, label: "Office", value: "123 Logistics Ave, Suite 100" },
-            ].map(({ icon: Icon, label, value }) => (
-              <div key={label} className="flex flex-col items-center">
-                <div className="w-11 h-11 bg-primary/10 rounded-full flex items-center justify-center mb-2">
-                  <Icon className="w-5 h-5 text-primary" />
-                </div>
-                <span className="text-sm font-semibold text-foreground mb-1">{label}</span>
-                <span className="text-sm text-muted-foreground">{value}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Banner */}
-      <section className="py-14 md:py-20 bg-section">
+      <section id="contact" className="py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-foreground/80 to-foreground px-6 py-16 md:py-24 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Ready to ship worldwide?
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-6">
+            <Mail className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-foreground uppercase tracking-wide">Get In Touch</span>
+          </div>
+
+          {/* Header row */}
+          <div className="grid md:grid-cols-[3fr_2fr] gap-6 md:gap-10 mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              Let's Move Your Business Forward
             </h2>
-            <p className="text-primary-foreground/70 text-lg max-w-xl mx-auto mb-8">
-              Join hundreds of businesses that trust TeamConsol for reliable, fast, and affordable logistics solutions.
-            </p>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 bg-primary-foreground text-foreground px-8 py-3 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
-            >
-              Get a Quote
-            </a>
+            <div className="flex flex-col justify-center">
+              <p className="text-muted-foreground leading-relaxed">
+                Ready to ship? Reach out for a free quote or any inquiries. Our team is available around the clock to support your logistics needs.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-[2fr_3fr] gap-5">
+            {/* Contact cards */}
+            <div className="flex flex-col gap-5">
+              {[
+                { icon: Mail, label: "Email Us", value: "info@teamconsol.com", desc: "We respond within 24 hours" },
+                { icon: Phone, label: "Call / WhatsApp", value: "+1 (800) 000-0000", desc: "Available Mon–Sat, 8am–6pm" },
+                { icon: MapPin, label: "Visit Our Office", value: "123 Logistics Ave, Suite 100", desc: "Walk-ins welcome" },
+              ].map(({ icon: Icon, label, value, desc }) => (
+                <div key={label} className="group bg-secondary rounded-2xl p-5 flex items-start gap-4 hover:bg-foreground transition-colors duration-300">
+                  <div className="w-11 h-11 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <Icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-foreground mb-0.5 group-hover:text-primary-foreground transition-colors">{label}</h3>
+                    <p className="text-base font-semibold text-foreground group-hover:text-primary-foreground transition-colors">{value}</p>
+                    <p className="text-xs text-muted-foreground mt-1 group-hover:text-primary-foreground/60 transition-colors">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA card */}
+            <div className="relative rounded-2xl overflow-hidden bg-foreground p-8 md:p-12 flex flex-col justify-between min-h-[320px]">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+                  Ready to ship worldwide?
+                </h3>
+                <p className="text-primary-foreground/70 text-lg leading-relaxed max-w-md mb-8">
+                  Join hundreds of businesses that trust TeamConsol for reliable, fast, and affordable logistics solutions.
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href="https://wa.me/18000000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+                >
+                  Get a Quote
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
+                <a
+                  href="mailto:info@teamconsol.com"
+                  className="inline-flex items-center gap-2 border border-primary-foreground/20 text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary-foreground/10 transition-colors"
+                >
+                  Send an Email
+                </a>
+              </div>
+              {/* Decorative accent */}
+              <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+            </div>
           </div>
         </div>
       </section>
