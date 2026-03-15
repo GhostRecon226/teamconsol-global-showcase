@@ -3,6 +3,7 @@ import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phon
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import heroBg from "@/assets/hero-bg.jpg";
+import teamConsolLogo from "@/assets/team-consol-logo.png";
 import serviceAirFreight from "@/assets/service-air-freight.jpg";
 import serviceSeaFreight from "@/assets/service-sea-freight.jpg";
 import serviceDoorToDoor from "@/assets/service-door-to-door.jpg";
