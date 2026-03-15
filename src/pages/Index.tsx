@@ -5,6 +5,13 @@ import heroBg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/logo.png";
 
 const Index = () => {
+  const [open, setOpen] = useState(false);
+  const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#services", label: "Services" },
+    { href: "#why-us", label: "Why Us" },
+    { href: "#contact", label: "Contact" },
+  ];
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
