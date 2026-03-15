@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phone, MapPin, Menu, ArrowUpRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
+import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import serviceAirFreight from "@/assets/service-air-freight.jpg";
 import serviceSeaFreight from "@/assets/service-sea-freight.jpg";
