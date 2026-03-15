@@ -61,7 +61,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-start mb-8">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight text-foreground">
-              <span className="text-primary">Logistics</span> That Move<br /> Your Business
+              <span className="text-primary">Logistics</span> That Move<br /><span className="text-muted-foreground">Your Business</span>
             </h1>
             <div className="flex flex-col justify-center gap-4">
               <p className="text-muted-foreground text-lg leading-relaxed">
