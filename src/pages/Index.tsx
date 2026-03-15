@@ -167,31 +167,32 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          {/* 2x2 Card Grid */}
-          <div className="grid sm:grid-cols-2 gap-5">
+          <StaggerContainer className="grid sm:grid-cols-2 gap-5">
             {[
               { img: serviceAirFreight, title: "Air Freight" },
               { img: serviceSeaFreight, title: "Sea Freight" },
               { img: serviceDoorToDoor, title: "Door-to-Door Delivery" },
               { img: serviceCustoms, title: "Customs Clearance" },
             ].map(({ img, title }) => (
-              <div key={title} className="group bg-secondary rounded-xl overflow-hidden">
-                <div className="overflow-hidden rounded-xl m-2">
-                  <img
-                    src={img}
-                    alt={title}
-                    className="w-full h-52 md:h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
-                  />
+              <StaggerItem key={title}>
+                <div className="group bg-secondary rounded-xl overflow-hidden">
+                  <div className="overflow-hidden rounded-xl m-2">
+                    <img
+                      src={img}
+                      alt={title}
+                      className="w-full h-52 md:h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="flex items-center justify-between px-4 py-4">
+                    <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+                    <span className="w-9 h-9 bg-primary rounded-full flex items-center justify-center shrink-0">
+                      <ArrowUpRight className="w-4 h-4 text-primary-foreground" />
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between px-4 py-4">
-                  <h3 className="text-lg font-semibold text-foreground">{title}</h3>
-                  <span className="w-9 h-9 bg-primary rounded-full flex items-center justify-center shrink-0">
-                    <ArrowUpRight className="w-4 h-4 text-primary-foreground" />
-                  </span>
-                </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
