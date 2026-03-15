@@ -73,7 +73,7 @@ const Index = () => {
             </div>
           </div>
           <div className="relative rounded-xl overflow-hidden">
-            <img src={heroBg} alt="Global shipping operations" className="w-full h-[300px] md:h-[480px] object-cover object-[center_70%]" />
+            <img src={heroBg} alt="Global shipping operations" className="w-full h-[300px] md:h-[480px] object-cover object-bottom" />
             <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md flex items-center gap-2 text-sm font-semibold text-foreground">
               <span className="text-primary">★</span> 4.8 <span className="text-muted-foreground font-normal">(1200 Reviews)</span>
             </div>
