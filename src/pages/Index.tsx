@@ -90,11 +90,46 @@ const Index = () => {
 
       {/* About */}
       <section id="about" className="py-14 md:py-20">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About TeamConsol</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            TeamConsol Global Shipping & Logistics is an international logistics company dedicated to providing seamless shipping solutions worldwide. We manage every step of the supply chain — from pickup and transportation to customs clearance and final delivery — ensuring your cargo reaches its destination safely, on time, and within budget.
-          </p>
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+            {/* Left: Text */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-full px-4 py-1.5 mb-6">
+                <span className="text-sm font-semibold uppercase tracking-wide">About Us</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-6">
+                Delivering your goods efficiently, no matter the distance
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                From local deliveries to long-distance shipments, we ensure your goods reach their destination safely and on time.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+                Our reliable last mile delivery solutions combine speed, precision, and care, so you can focus on your business while we handle the logistics.
+              </p>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-3 bg-foreground text-background px-6 py-3 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity"
+              >
+                Get a Quote
+                <span className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+                  <ArrowUpRight className="w-4 h-4 text-primary-foreground" />
+                </span>
+              </a>
+            </div>
+
+            {/* Right: Image collage */}
+            <div className="grid grid-cols-2 gap-3 h-[480px]">
+              <div className="row-span-2 rounded-2xl overflow-hidden">
+                <img src={aboutMain} alt="Warehouse operations" className="w-full h-full object-cover" />
+              </div>
+              <div className="rounded-2xl overflow-hidden">
+                <img src={aboutDelivery} alt="Door-to-door delivery" className="w-full h-full object-cover" />
+              </div>
+              <div className="rounded-2xl overflow-hidden">
+                <img src={aboutWarehouse} alt="Warehouse team" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
