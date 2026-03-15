@@ -310,9 +310,7 @@ const Index = () => {
             <div className="bg-card rounded-2xl border p-8 md:p-12">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
                 <div className="max-w-sm">
-                  <span className="text-lg font-bold text-foreground">
-                    Team<span className="text-primary">Consol</span>
-                  </span>
+                  <img src={teamConsolLogo} alt="TeamConsol Global Shipping & Logistics" className="h-12 w-auto" />
                   <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
                     TeamConsol empowers businesses with seamless global shipping and logistics — making international trade easier, faster, and more affordable.
                   </p>
