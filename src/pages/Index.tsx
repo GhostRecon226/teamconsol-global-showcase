@@ -19,14 +19,41 @@ const Index = () => {
         <div className="container mx-auto flex items-center justify-between py-4 px-4">
           <img src={logo} alt="TeamConsol Global Shipping & Logistics" className="h-12 md:h-14 w-auto" />
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-            <a href="#about" className="hover:text-foreground transition-colors">About</a>
-            <a href="#services" className="hover:text-foreground transition-colors">Services</a>
-            <a href="#why-us" className="hover:text-foreground transition-colors">Why Us</a>
-            <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
+            {navLinks.map(({ href, label }) => (
+              <a key={href} href={href} className="hover:text-foreground transition-colors">{label}</a>
+            ))}
           </nav>
-          <a href="#contact" className="bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity">
-            Get a Quote
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="#contact" className="hidden sm:inline-flex bg-primary text-primary-foreground px-5 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity">
+              Get a Quote
+            </a>
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger className="md:hidden p-2 rounded-md hover:bg-accent transition-colors" aria-label="Open menu">
+                <Menu className="w-6 h-6 text-foreground" />
+              </SheetTrigger>
+              <SheetContent side="right" className="w-72">
+                <nav className="flex flex-col gap-6 mt-10">
+                  {navLinks.map(({ href, label }) => (
+                    <a
+                      key={href}
+                      href={href}
+                      onClick={() => setOpen(false)}
+                      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      {label}
+                    </a>
+                  ))}
+                  <a
+                    href="#contact"
+                    onClick={() => setOpen(false)}
+                    className="bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center hover:opacity-90 transition-opacity"
+                  >
+                    Get a Quote
+                  </a>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </header>
 
