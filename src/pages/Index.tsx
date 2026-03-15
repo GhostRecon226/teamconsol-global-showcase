@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phone, MapPin, Menu, ArrowUpRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
@@ -354,8 +355,8 @@ const Index = () => {
               <div className="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
                 <p>© {new Date().getFullYear()} TeamConsol Global Shipping & Logistics. All rights reserved.</p>
                 <div className="flex items-center gap-4">
-                  <a href="#" className="hover:text-foreground transition-colors underline">Privacy Policy</a>
-                  <a href="#" className="hover:text-foreground transition-colors underline">Terms of Service</a>
+                  <Link to="/privacy" className="hover:text-foreground transition-colors underline">Privacy Policy</Link>
+                  <Link to="/terms" className="hover:text-foreground transition-colors underline">Terms of Service</Link>
                 </div>
               </div>
             </div>
