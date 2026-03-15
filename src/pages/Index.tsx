@@ -126,7 +126,7 @@ const Index = () => {
       </section>
 
       {/* Our Services */}
-      <section id="why-us" className="py-14 md:py-20">
+      <section id="services" className="py-14 md:py-20">
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-6">
