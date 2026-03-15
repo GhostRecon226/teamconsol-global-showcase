@@ -97,7 +97,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             {/* Left: Text */}
-            <div>
+            <AnimatedSection>
               <div className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-full px-4 py-1.5 mb-6">
                 <span className="text-sm font-semibold uppercase tracking-wide">About Us</span>
               </div>
@@ -119,20 +119,23 @@ const Index = () => {
                   <ArrowUpRight className="w-4 h-4 text-primary-foreground" />
                 </span>
               </a>
-            </div>
+            </AnimatedSection>
 
             {/* Right: Image collage */}
-            <div className="grid grid-cols-2 gap-3 h-[480px]">
-              <div className="row-span-2 rounded-2xl overflow-hidden">
-                <img src={aboutMain} alt="Warehouse operations" className="w-full h-full object-cover" />
+            <AnimatedSection delay={0.2}>
+              <div className="grid grid-cols-2 gap-3 h-[480px]">
+                <div className="row-span-2 rounded-2xl overflow-hidden">
+                  <img src={aboutMain} alt="Warehouse operations" className="w-full h-full object-cover" />
+                </div>
+                <div className="rounded-2xl overflow-hidden">
+                  <img src={aboutDelivery} alt="Door-to-door delivery" className="w-full h-full object-cover" />
+                </div>
+                <div className="rounded-2xl overflow-hidden">
+                  <img src={aboutWarehouse} alt="Warehouse team" className="w-full h-full object-cover" />
+                </div>
               </div>
-              <div className="rounded-2xl overflow-hidden">
-                <img src={aboutDelivery} alt="Door-to-door delivery" className="w-full h-full object-cover" />
-              </div>
-              <div className="rounded-2xl overflow-hidden">
-                <img src={aboutWarehouse} alt="Warehouse team" className="w-full h-full object-cover" />
-              </div>
-            </div>
+            </AnimatedSection>
+          </div>
           </div>
         </div>
       </section>
