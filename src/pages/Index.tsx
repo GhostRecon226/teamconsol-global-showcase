@@ -59,8 +59,8 @@ const Index = () => {
       {/* Hero */}
       <section className="bg-background py-10 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-start mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground">
+          <div className="grid md:grid-cols-[3fr_2fr] gap-6 md:gap-10 items-start mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight text-foreground">
               <span className="text-primary">Logistics</span> That Move<br /><span className="text-muted-foreground">Your Business</span>
             </h1>
             <div className="flex flex-col justify-center gap-4">
