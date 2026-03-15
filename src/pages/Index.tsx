@@ -143,29 +143,29 @@ const Index = () => {
       {/* Our Services */}
       <section id="why-us" className="py-14 md:py-20">
         <div className="container mx-auto px-4">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-6">
-            <Package className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-foreground uppercase tracking-wide">Our Services</span>
-          </div>
-
-          {/* Header row */}
-          <div className="grid md:grid-cols-[3fr_2fr] gap-6 md:gap-10 mb-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-              Discover The Full Range Of Services We Offer For Shipping
-            </h2>
-            <div className="flex flex-col justify-center gap-4">
-              <p className="text-muted-foreground leading-relaxed">
-                Logistics Services Include Freight Forwarding, Warehousing, Customs Clearance, And Transportation. These Services Help Businesses Move Their Products And Materials Through The Supply Chain.
-              </p>
-              <a href="#services" className="inline-flex items-center gap-2 text-foreground font-semibold hover:text-primary transition-colors w-fit">
-                <span className="w-8 h-8 border border-primary rounded-full flex items-center justify-center">
-                  <ArrowUpRight className="w-4 h-4 text-primary" />
-                </span>
-                View All Services
-              </a>
+          <AnimatedSection>
+            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-6">
+              <Package className="w-4 h-4 text-primary" />
+              <span className="text-sm font-semibold text-foreground uppercase tracking-wide">Our Services</span>
             </div>
-          </div>
+
+            <div className="grid md:grid-cols-[3fr_2fr] gap-6 md:gap-10 mb-10">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                Discover The Full Range Of Services We Offer For Shipping
+              </h2>
+              <div className="flex flex-col justify-center gap-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  Logistics Services Include Freight Forwarding, Warehousing, Customs Clearance, And Transportation. These Services Help Businesses Move Their Products And Materials Through The Supply Chain.
+                </p>
+                <a href="#services" className="inline-flex items-center gap-2 text-foreground font-semibold hover:text-primary transition-colors w-fit">
+                  <span className="w-8 h-8 border border-primary rounded-full flex items-center justify-center">
+                    <ArrowUpRight className="w-4 h-4 text-primary" />
+                  </span>
+                  View All Services
+                </a>
+              </div>
+            </div>
+          </AnimatedSection>
 
           {/* 2x2 Card Grid */}
           <div className="grid sm:grid-cols-2 gap-5">
