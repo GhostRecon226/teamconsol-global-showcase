@@ -3,6 +3,7 @@ import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phon
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import heroBg from "@/assets/hero-bg.jpg";
+import teamConsolLogo from "@/assets/team-consol-logo.png";
 import serviceAirFreight from "@/assets/service-air-freight.jpg";
 import serviceSeaFreight from "@/assets/service-sea-freight.jpg";
 import serviceDoorToDoor from "@/assets/service-door-to-door.jpg";
@@ -24,7 +25,7 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b">
         <div className="container mx-auto flex items-center justify-between py-3 px-4">
-          <span className="text-lg font-bold text-foreground">Team<span className="text-primary">Consol</span></span>
+          <img src={teamConsolLogo} alt="TeamConsol Global Shipping & Logistics" className="h-10 w-auto" />
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             {navLinks.map(({ href, label }) => (
               <a key={href} href={href} className="hover:text-foreground transition-colors">{label}</a>
@@ -309,9 +310,7 @@ const Index = () => {
             <div className="bg-card rounded-2xl border p-8 md:p-12">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
                 <div className="max-w-sm">
-                  <span className="text-lg font-bold text-foreground">
-                    Team<span className="text-primary">Consol</span>
-                  </span>
+                  <img src={teamConsolLogo} alt="TeamConsol Global Shipping & Logistics" className="h-12 w-auto" />
                   <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
                     TeamConsol empowers businesses with seamless global shipping and logistics — making international trade easier, faster, and more affordable.
                   </p>
