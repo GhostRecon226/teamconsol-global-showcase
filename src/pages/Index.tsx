@@ -68,6 +68,7 @@ const Index = () => {
       {/* Hero */}
       <section className="bg-background py-10 md:py-16">
         <div className="container mx-auto px-4">
+        <AnimatedSection>
           <div className="grid md:grid-cols-[3fr_2fr] gap-6 md:gap-10 items-start mb-8">
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight text-foreground">
               <span className="text-primary">Logistics</span> That Move<br /><span className="text-muted-foreground">Your Business</span>
@@ -81,14 +82,15 @@ const Index = () => {
               </a>
             </div>
           </div>
+        </AnimatedSection>
+        <AnimatedSection delay={0.2}>
           <div className="relative rounded-xl overflow-hidden">
             <img src={heroBg} alt="Global shipping operations" className="w-full h-[300px] md:h-[480px] object-cover" />
             <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md flex items-center gap-2 text-sm font-semibold text-foreground">
               <span className="text-primary">★</span> 4.8 <span className="text-muted-foreground font-normal">(1200 Reviews)</span>
             </div>
           </div>
-        </div>
-      </section>
+        </AnimatedSection>
 
       {/* About */}
       <section id="about" className="py-14 md:py-20">
