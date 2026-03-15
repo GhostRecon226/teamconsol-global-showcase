@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phone, MapPin, Menu } from "lucide-react";
+import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phone, MapPin, Menu, ArrowUpRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import heroBg from "@/assets/hero-bg.jpg";
+import serviceAirFreight from "@/assets/service-air-freight.jpg";
+import serviceSeaFreight from "@/assets/service-sea-freight.jpg";
+import serviceDoorToDoor from "@/assets/service-door-to-door.jpg";
+import serviceCustoms from "@/assets/service-customs.jpg";
 
 const Index = () => {
   const [open, setOpen] = useState(false);
@@ -113,23 +117,55 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Our Services */}
       <section id="why-us" className="py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-10">Why Choose Us</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-6">
+            <Package className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-foreground uppercase tracking-wide">Our Services</span>
+          </div>
+
+          {/* Header row */}
+          <div className="grid md:grid-cols-[3fr_2fr] gap-6 md:gap-10 mb-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              Discover The Full Range Of Services We Offer For Shipping
+            </h2>
+            <div className="flex flex-col justify-center gap-4">
+              <p className="text-muted-foreground leading-relaxed">
+                Logistics Services Include Freight Forwarding, Warehousing, Customs Clearance, And Transportation. These Services Help Businesses Move Their Products And Materials Through The Supply Chain.
+              </p>
+              <a href="#services" className="inline-flex items-center gap-2 text-foreground font-semibold hover:text-primary transition-colors w-fit">
+                <span className="w-8 h-8 border border-primary rounded-full flex items-center justify-center">
+                  <ArrowUpRight className="w-4 h-4 text-primary" />
+                </span>
+                View All Services
+              </a>
+            </div>
+          </div>
+
+          {/* 2x2 Card Grid */}
+          <div className="grid sm:grid-cols-2 gap-5">
             {[
-              { icon: ShieldCheck, title: "Reliable Partners", desc: "Trusted logistics network across the globe." },
-              { icon: Package, title: "Safe Handling", desc: "Your cargo is handled with the utmost care." },
-              { icon: DollarSign, title: "Competitive Pricing", desc: "Affordable rates without compromising quality." },
-              { icon: Clock, title: "Fast Response", desc: "Quick quotes and responsive customer support." },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="text-center">
-                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-7 h-7 text-primary" />
+              { img: serviceAirFreight, title: "Air Freight" },
+              { img: serviceSeaFreight, title: "Sea Freight" },
+              { img: serviceDoorToDoor, title: "Door-to-Door Delivery" },
+              { img: serviceCustoms, title: "Customs Clearance" },
+            ].map(({ img, title }) => (
+              <div key={title} className="group bg-secondary rounded-xl overflow-hidden">
+                <div className="overflow-hidden rounded-xl m-2">
+                  <img
+                    src={img}
+                    alt={title}
+                    className="w-full h-52 md:h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-1">{title}</h3>
-                <p className="text-muted-foreground text-sm">{desc}</p>
+                <div className="flex items-center justify-between px-4 py-4">
+                  <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+                  <span className="w-9 h-9 bg-primary rounded-full flex items-center justify-center shrink-0">
+                    <ArrowUpRight className="w-4 h-4 text-primary-foreground" />
+                  </span>
+                </div>
               </div>
             ))}
           </div>
