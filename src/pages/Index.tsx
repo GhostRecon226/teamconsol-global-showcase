@@ -58,25 +58,28 @@ const Index = () => {
       </header>
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroBg} alt="Global shipping" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-foreground/70" />
-        </div>
-        <div className="relative container mx-auto px-4 py-28 md:py-40 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-6 leading-tight">
-            Reliable Global Shipping<br className="hidden sm:block" /> & Logistics
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-primary-foreground/80 mb-10">
-            TeamConsol provides dependable door-to-door shipping services through air freight and sea freight for businesses and individuals.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#contact" className="bg-primary text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:opacity-90 transition-opacity">
-              Request a Quote
-            </a>
-            <a href="#contact" className="border border-primary-foreground/40 text-primary-foreground px-8 py-3.5 rounded-md font-semibold text-base hover:bg-primary-foreground/10 transition-colors">
-              Contact Us
-            </a>
+      <section className="bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          {/* Two-column text area */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground">
+              <span className="text-primary">Logistics</span> That Move Your Business
+            </h1>
+            <div className="flex flex-col justify-center gap-4">
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                From first mile to last, we power every step of your supply chain with dependable air and sea freight solutions worldwide.
+              </p>
+              <a href="#contact" className="inline-flex items-center gap-1 text-primary font-semibold hover:opacity-80 transition-opacity w-fit">
+                Get a quote <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+          {/* Full-width hero image with rating badge */}
+          <div className="relative rounded-xl overflow-hidden">
+            <img src={heroBg} alt="Global shipping operations" className="w-full h-[300px] md:h-[480px] object-cover" />
+            <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md flex items-center gap-2 text-sm font-semibold text-foreground">
+              <span className="text-primary">★</span> 4.8 <span className="text-muted-foreground font-normal">(1200 Reviews)</span>
+            </div>
           </div>
         </div>
       </section>
