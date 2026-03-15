@@ -6,6 +6,9 @@ import serviceAirFreight from "@/assets/service-air-freight.jpg";
 import serviceSeaFreight from "@/assets/service-sea-freight.jpg";
 import serviceDoorToDoor from "@/assets/service-door-to-door.jpg";
 import serviceCustoms from "@/assets/service-customs.jpg";
+import aboutMain from "@/assets/about-main.jpg";
+import aboutDelivery from "@/assets/about-delivery.jpg";
+import aboutWarehouse from "@/assets/about-warehouse.jpg";
 
 const Index = () => {
   const [open, setOpen] = useState(false);
