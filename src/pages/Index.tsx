@@ -25,7 +25,7 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b">
         <div className="container mx-auto flex items-center justify-between py-3 px-4">
-          <span className="text-lg font-bold text-foreground">Team<span className="text-primary">Consol</span></span>
+          <img src={teamConsolLogo} alt="TeamConsol Global Shipping & Logistics" className="h-10 w-auto" />
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             {navLinks.map(({ href, label }) => (
               <a key={href} href={href} className="hover:text-foreground transition-colors">{label}</a>
