@@ -1,7 +1,11 @@
 import { useState } from "react";
-import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phone, MapPin, Menu } from "lucide-react";
+import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phone, MapPin, Menu, ArrowUpRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import heroBg from "@/assets/hero-bg.jpg";
+import serviceAirFreight from "@/assets/service-air-freight.jpg";
+import serviceSeaFreight from "@/assets/service-sea-freight.jpg";
+import serviceDoorToDoor from "@/assets/service-door-to-door.jpg";
+import serviceCustoms from "@/assets/service-customs.jpg";
 
 const Index = () => {
   const [open, setOpen] = useState(false);
