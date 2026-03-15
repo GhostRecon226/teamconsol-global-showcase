@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Plane, Ship, Truck, ShieldCheck, Package, DollarSign, Clock, Mail, Phone, MapPin, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.png";
 
 const Index = () => {
   const [open, setOpen] = useState(false);
@@ -16,8 +15,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b">
-        <div className="container mx-auto flex items-center justify-between py-4 px-4">
-          <img src={logo} alt="TeamConsol Global Shipping & Logistics" className="h-12 md:h-14 w-auto" />
+        <div className="container mx-auto flex items-center justify-between py-3 px-4">
+          <span className="text-lg font-bold text-foreground">Team<span className="text-primary">Consol</span></span>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
             {navLinks.map(({ href, label }) => (
               <a key={href} href={href} className="hover:text-foreground transition-colors">{label}</a>
@@ -58,10 +57,9 @@ const Index = () => {
       </header>
 
       {/* Hero */}
-      <section className="bg-background py-16 md:py-24">
+      <section className="bg-background py-10 md:py-16">
         <div className="container mx-auto px-4">
-          {/* Two-column text area */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start mb-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-start mb-8">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-foreground">
               <span className="text-primary">Logistics</span> That Move Your Business
             </h1>
@@ -74,7 +72,6 @@ const Index = () => {
               </a>
             </div>
           </div>
-          {/* Full-width hero image with rating badge */}
           <div className="relative rounded-xl overflow-hidden">
             <img src={heroBg} alt="Global shipping operations" className="w-full h-[300px] md:h-[480px] object-cover" />
             <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-md flex items-center gap-2 text-sm font-semibold text-foreground">
@@ -85,9 +82,9 @@ const Index = () => {
       </section>
 
       {/* About */}
-      <section id="about" className="py-20 md:py-28">
+      <section id="about" className="py-14 md:py-20">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">About TeamConsol</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About TeamConsol</h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
             TeamConsol Global Shipping & Logistics is an international logistics company dedicated to providing seamless shipping solutions worldwide. We manage every step of the supply chain — from pickup and transportation to customs clearance and final delivery — ensuring your cargo reaches its destination safely, on time, and within budget.
           </p>
@@ -95,20 +92,20 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section id="services" className="py-20 md:py-28 bg-section">
+      <section id="services" className="py-14 md:py-20 bg-section">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-14">Our Services</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-10">Our Services</h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               { icon: Plane, title: "Air Freight", desc: "Fast international shipping for urgent cargo. We connect you to major destinations worldwide with reliable air freight solutions." },
               { icon: Ship, title: "Sea Freight", desc: "Cost-effective shipping solution for large or bulk cargo. Ideal for businesses looking to optimize logistics costs." },
               { icon: Truck, title: "Door-to-Door Delivery", desc: "Complete logistics service from pickup to final delivery. We handle everything so you don't have to." },
             ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="bg-card rounded-xl p-8 shadow-sm border hover:shadow-md transition-shadow">
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
-                  <Icon className="w-7 h-7 text-primary" />
+              <div key={title} className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">{title}</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -117,10 +114,10 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section id="why-us" className="py-20 md:py-28">
+      <section id="why-us" className="py-14 md:py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-14">Why Choose Us</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-10">Why Choose Us</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               { icon: ShieldCheck, title: "Reliable Partners", desc: "Trusted logistics network across the globe." },
               { icon: Package, title: "Safe Handling", desc: "Your cargo is handled with the utmost care." },
@@ -128,10 +125,10 @@ const Index = () => {
               { icon: Clock, title: "Fast Response", desc: "Quick quotes and responsive customer support." },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-5">
-                  <Icon className="w-8 h-8 text-primary" />
+                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-1">{title}</h3>
                 <p className="text-muted-foreground text-sm">{desc}</p>
               </div>
             ))}
@@ -140,19 +137,19 @@ const Index = () => {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 md:py-28 bg-section">
+      <section id="contact" className="py-14 md:py-20 bg-section">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Get in Touch</h2>
-          <p className="text-muted-foreground text-lg mb-12">Ready to ship? Contact us for a free quote or any inquiries.</p>
-          <div className="grid sm:grid-cols-3 gap-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Get in Touch</h2>
+          <p className="text-muted-foreground text-lg mb-8">Ready to ship? Contact us for a free quote or any inquiries.</p>
+          <div className="grid sm:grid-cols-3 gap-6">
             {[
               { icon: Mail, label: "Email", value: "info@teamconsol.com" },
               { icon: Phone, label: "Phone / WhatsApp", value: "+1 (800) 000-0000" },
               { icon: MapPin, label: "Office", value: "123 Logistics Ave, Suite 100" },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
-                  <Icon className="w-6 h-6 text-primary" />
+                <div className="w-11 h-11 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                  <Icon className="w-5 h-5 text-primary" />
                 </div>
                 <span className="text-sm font-semibold text-foreground mb-1">{label}</span>
                 <span className="text-sm text-muted-foreground">{value}</span>
@@ -163,16 +160,16 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-foreground py-10">
+      <footer className="bg-foreground py-8">
         <div className="container mx-auto px-4 text-center">
           <span className="text-lg font-bold text-primary-foreground">
             Team<span className="text-primary">Consol</span> Global Shipping & Logistics
           </span>
-          <div className="flex items-center justify-center gap-6 mt-4 text-sm text-primary-foreground/60">
+          <div className="flex items-center justify-center gap-6 mt-3 text-sm text-primary-foreground/60">
             <span>info@teamconsol.com</span>
             <span>+1 (800) 000-0000</span>
           </div>
-          <p className="text-primary-foreground/40 text-xs mt-6">
+          <p className="text-primary-foreground/40 text-xs mt-4">
             © {new Date().getFullYear()} TeamConsol Global Shipping & Logistics. All rights reserved.
           </p>
         </div>
