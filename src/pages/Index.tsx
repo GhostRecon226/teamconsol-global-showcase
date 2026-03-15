@@ -188,6 +188,64 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section id="why-us-stats" className="py-14 md:py-20">
+        <div className="container mx-auto px-4">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-1.5 mb-6">
+            <ShieldCheck className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-foreground uppercase tracking-wide">Why Choose Us</span>
+          </div>
+
+          {/* Header row */}
+          <div className="grid md:grid-cols-[3fr_2fr] gap-6 md:gap-10 mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+              Trusted By Businesses Across The Globe
+            </h2>
+            <div className="flex flex-col justify-center">
+              <p className="text-muted-foreground leading-relaxed">
+                We combine speed, reliability, and transparency to deliver a logistics experience that keeps your supply chain running smoothly — every single time.
+              </p>
+            </div>
+          </div>
+
+          {/* Stats row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12">
+            {[
+              { value: "15+", label: "Years of Experience" },
+              { value: "120+", label: "Countries Served" },
+              { value: "50K+", label: "Shipments Delivered" },
+              { value: "99%", label: "On-Time Delivery" },
+            ].map(({ value, label }) => (
+              <div key={label} className="bg-secondary rounded-2xl p-6 md:p-8 text-center">
+                <p className="text-3xl md:text-4xl font-extrabold text-primary mb-2">{value}</p>
+                <p className="text-sm text-muted-foreground font-medium">{label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Trust indicators */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { icon: Clock, title: "Fast & Reliable", desc: "Strict timelines with real-time tracking so you always know where your cargo is." },
+              { icon: ShieldCheck, title: "Fully Insured", desc: "Every shipment is covered with comprehensive cargo insurance for your peace of mind." },
+              { icon: DollarSign, title: "Competitive Pricing", desc: "Transparent rates with no hidden fees — get the best value for your logistics spend." },
+              { icon: Package, title: "End-to-End Service", desc: "From pickup to final delivery, we handle every step of your supply chain." },
+              { icon: Ship, title: "Global Network", desc: "A trusted network of partners across 120+ countries ensures seamless worldwide coverage." },
+              { icon: Plane, title: "Express Options", desc: "Need it fast? Our priority air freight gets your cargo there in record time." },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="group bg-secondary rounded-2xl p-6 hover:bg-foreground transition-colors duration-300">
+                <div className="w-11 h-11 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <Icon className="w-5 h-5 text-primary" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary-foreground transition-colors">{title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-primary-foreground/70 transition-colors">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="py-14 md:py-20 bg-section">
         <div className="container mx-auto px-4 max-w-3xl text-center">
