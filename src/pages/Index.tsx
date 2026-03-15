@@ -91,6 +91,8 @@ const Index = () => {
             </div>
           </div>
         </AnimatedSection>
+        </div>
+      </section>
 
       {/* About */}
       <section id="about" className="py-14 md:py-20">
