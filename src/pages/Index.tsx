@@ -261,7 +261,7 @@ const Index = () => {
               {[
                 { icon: Mail, label: "Email Us", value: "info@teamconsol.com", desc: "We respond within 24 hours" },
                 { icon: Phone, label: "Call / WhatsApp", value: "+1 (800) 000-0000", desc: "Available Mon–Sat, 8am–6pm" },
-                { icon: MapPin, label: "Visit Our Office", value: "123 Logistics Ave, Suite 100", desc: "Walk-ins welcome" },
+                { icon: MapPin, label: "Visit Our Office", value: "51 Lagos Street, Ebute Metta, Lagos", desc: "Walk-ins welcome" },
               ].map(({ icon: Icon, label, value, desc }) => (
                 <StaggerItem key={label}>
                   <div className="group bg-secondary rounded-2xl p-5 flex items-start gap-4 hover:bg-foreground transition-colors duration-300">
