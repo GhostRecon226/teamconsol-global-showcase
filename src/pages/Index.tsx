@@ -313,7 +313,9 @@ const Index = () => {
             <div className="bg-card rounded-2xl border p-8 md:p-12">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
                 <div className="max-w-sm">
-                  <img src={teamConsolLogo} alt="TeamConsol Global Shipping & Logistics" className="h-12 w-auto" />
+                  <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="cursor-pointer">
+                    <img src={teamConsolLogo} alt="TeamConsol Global Shipping & Logistics" className="h-16 w-auto" />
+                  </a>
                   <p className="text-muted-foreground text-sm mt-3 leading-relaxed">
                     TeamConsol empowers businesses with seamless global shipping and logistics — making international trade easier, faster, and more affordable.
                   </p>
