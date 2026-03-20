@@ -26,7 +26,9 @@ const Index = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b">
         <div className="container mx-auto flex items-center py-3 px-4">
-          <img src={teamConsolLogo} alt="TeamConsol Global Shipping & Logistics" className="h-10 w-auto" />
+          <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="cursor-pointer">
+            <img src={teamConsolLogo} alt="TeamConsol Global Shipping & Logistics" className="h-14 w-auto" />
+          </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground ml-auto mr-6">
             {navLinks.map(({ href, label }) => (
               <a key={href} href={href} className="hover:text-foreground transition-colors">{label}</a>
