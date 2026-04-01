@@ -291,11 +291,11 @@ const Index = () => {
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-4">
-                  <a href="https://wa.me/18000000000" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+                  <a href="https://wa.me/18000000000" target="_blank" rel="noopener noreferrer" onClick={() => typeof fbq === 'function' && fbq('track', 'Lead')} className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
                     Get a Quote
                     <ArrowUpRight className="w-4 h-4" />
                   </a>
-                  <a href="mailto:info@teamconsol.com" className="inline-flex items-center gap-2 border border-primary-foreground/20 text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary-foreground/10 transition-colors">
+                  <a href="mailto:info@teamconsol.com" onClick={() => typeof fbq === 'function' && fbq('track', 'Lead')} className="inline-flex items-center gap-2 border border-primary-foreground/20 text-primary-foreground px-6 py-3 rounded-lg text-sm font-semibold hover:bg-primary-foreground/10 transition-colors">
                     Send an Email
                   </a>
                 </div>
